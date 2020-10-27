@@ -1,0 +1,50 @@
+Blender 3D - speeding up part of a video
+source: https://www.youtube.com/watch?v=NrX1sK_ZQqs
+
+    Choose screen layout - Video Editing
+    Chose top left panel to Properties
+Cut out the segment for speed change:
+    Shift+K = hard CUT at where you want to START
+    Shift+K = hard CUT again at the END
+Apply speed control and hide original video
+    RMB on the video portion,
+    from bottom ribbon of video seq. → add → Effect Strip → Speed Control
+    RMB video portion again,
+    H = hide original video clip
+Adjust the speed factor
+    RMB the purple speed control strip,
+    right hand-side tool panel
+    → scroll down
+    → unCheck "Stretch to input strip length";
+    check "Use as speed";
+    set Speed factor to 1;
+    set Multiply Speed to desired value
+Render out audio (for the speed-up to work properly blender needs separate audio file)
+    PgUp/PgDn to set the green cursor at the START of the speed-up
+        hover mouse over time-line,
+        S = set start-frame
+    PgUp/PgDn to set the green cursor at the END of the speed-up
+        hover mouse over time-line,
+        E = set end-frame
+    click Properties→Scene→Render→Audio button = render segment to it's own audio file
+    select "WAV"
+    give it a name
+    hit "MIXDOWN"
+Remove the audio
+    PgDn - to the beginning of speed-up
+    RMB on the turquoise audio strip
+    hit DEL, ENTER
+Add back the audio
+    from bottom ribbon of video seq. → add → Sound
+    select the file you just exported
+Adjust the pitch
+    RMB on new audio strip
+    right hand-side tool panel
+    → scroll down
+    set Pitch to the same value as the speed factor
+Clip down the strips
+    set the green cursor to the last moving frame with mouse and LEFT and RIGHT arrows
+    RMB on the end of the turquoise audio strip
+        hold SHIFT
+        RMB on the end of the hidden blue video strip to add it to selection
+
